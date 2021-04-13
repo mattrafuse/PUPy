@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="ca.uwaterloo.mrafuse.bluetoothplugin">
+
+    <uses-permission android:name="ca.uwaterloo.mrafuse.context.permission.REGISTER_AUTH_PLUGIN" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <service
+            android:name=".PrivacyPluginService"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="ca.uwaterloo.mrafuse.context.permission.READ_PLUGIN_DATA">
+            <meta-data
+                android:name="apiVersion"
+                android:value="1" />
+            <meta-data
+                android:name="pluginType"
+                android:value="privacy" />
+            <meta-data
+                android:name="title"
+                android:value="Bluetooth Privacy Plugin" />
+            <meta-data
+                android:name="description"
+                android:value="Bluetooth Privacy Plugin description" />
+            <meta-data
+                android:name="implicit"
+                android:value="false" />
+        </service>
+
+        <service
+            android:name=".UnfamiliarityPluginService"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="ca.uwaterloo.mrafuse.context.permission.READ_PLUGIN_DATA">
+            <meta-data
+                android:name="apiVersion"
+                android:value="1" />
+            <meta-data
+                android:name="pluginType"
+                android:value="unfamiliarity" />
+            <meta-data
+                android:name="title"
+                android:value="Bluetooth Unfamiliarity Plugin" />
+            <meta-data
+                android:name="description"
+                android:value="Bluetooth Unfamiliarity Plugin description" />
+            <meta-data
+                android:name="implicit"
+                android:value="false" />
+        </service>
+
+        <meta-data
+            android:name="startupService"
+            android:value="PrivacyPluginService,UnfamiliarityPluginService" />
+    </application>
+
+</manifest>

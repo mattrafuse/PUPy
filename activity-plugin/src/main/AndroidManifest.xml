@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="ca.uwaterloo.mrafuse.activityplugin">
+
+    <uses-permission android:name="ca.uwaterloo.mrafuse.context.permission.REGISTER_AUTH_PLUGIN" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.ACTIVITY_RECOGNITION" />
+    <uses-permission android:name="com.google.android.gms.permission.ACTIVITY_RECOGNITION" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".ProximityConfigurationActivity"
+            android:exported="true" />
+
+        <service
+            android:name=".ProximityPluginService"
+            android:enabled="true"
+            android:exported="true">
+            <meta-data
+                android:name="apiVersion"
+                android:value="1" />
+            <meta-data
+                android:name="pluginType"
+                android:value="proximity" />
+            <meta-data
+                android:name="title"
+                android:value="Activity Recognition Plugin" />
+            <meta-data
+                android:name="description"
+                android:value="Activity Recognition Plugin Description" />
+            <meta-data
+                android:name="configurationActivity"
+                android:value="ProximityConfigurationActivity" />
+            <!--
+            <meta-data
+                android:name="configurationActivity"
+                android:value="" />
+            <meta-data
+                android:name="explicitAuthActivity"
+                android:value="" />
+            -->
+
+            <meta-data
+                android:name="implicit"
+                android:value="true" />
+        </service>
+
+        <meta-data
+            android:name="startupService"
+            android:value="ProximityPluginService" />
+    </application>
+
+</manifest>

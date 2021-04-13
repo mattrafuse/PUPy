@@ -1,0 +1,8 @@
+include 'context-framework'
+include 'context-api'
+include 'custom-random-plugin'
+include 'activity-plugin'
+include 'location-plugin'
+include 'bluetooth-plugin'
+include 'proximity-plugin'
+include 'functionality-plugin'
