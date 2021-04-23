@@ -1,5 +1,5 @@
 # PUPy
-PUPy provides a large amount of context information through a simple interface, by taking in sensor data and condensing it into three values - privacy, unfamiliarity, and proximity, which each describe a different aspect of the context.
+PUPy provides a large amount of context information through a simple interface, by taking in sensor data and condensing it into three values - privacy, unfamiliarity, and proximity, which each describe a different aspect of the context. This in an Android implementation of the theoretical framework outlined in the masters thesis of Matthew Rafuse (that's me!).
 
 ## Installation
 
