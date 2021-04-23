@@ -1,4 +1,8 @@
 /**
+ * Copyright 2020 - 2021
+ *
+ * Matthew Rafuse <matthew.rafuse@uwaterloo.ca>
+ *
  * Copyright 2016 - 2017
  *
  * Daniel Hintze <daniel.hintze></daniel.hintze>@fhdw.de>
