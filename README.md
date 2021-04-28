@@ -15,7 +15,7 @@ You are using this application at your own risk. *We are not responsible for any
 
 ## Publications
 
-You can read about this work, and the theoretical framework underpinning it, in my thesis. It is currently not posted online, but a copy can be obtained from UWaterloo's [Math Grad Office](mailto:mgo@uwaterloo.ca).
+You can read about this work, and the theoretical framework underpinning it, in my thesis. It is currently posted [here](https://uwspace.uwaterloo.ca/handle/10012/16910).
 
 ## Credit
 
